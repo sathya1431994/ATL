@@ -6,6 +6,7 @@ var io = require('socket.io')(server);
 
 var port = process.env.PORT || 8000;
 
+app.set('port',( process.env.PORT || 8000 ))
 app.use(express.static('src'));
 
 app.get('/',function(req,res){
