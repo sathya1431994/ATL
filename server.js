@@ -8,6 +8,10 @@ var port = process.env.PORT || 8000;
 
 app.use(express.static('src'));
 
+app.get('/',function(req,res){
+    res.send();
+})
+
 io.on('connection', (socket) => {
 console.log('new connection made');
 
