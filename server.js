@@ -11,6 +11,9 @@ app.use(express.static('src'));
 app.get('/',function(req,res){
     res.send();
 })
+app.get('*',function(req,res){
+    return res.redirect('/');
+})
 
 io.on('connection', (socket) => {
 console.log('new connection made');
