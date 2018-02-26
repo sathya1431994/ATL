@@ -7,7 +7,7 @@ var io = require('socket.io')(server);
 var port = process.env.PORT || 8000;
 
 app.set('port',( process.env.PORT || 8000 ))
-app.use(express.static('src'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/',function(req,res){
     res.send();
